@@ -9,4 +9,4 @@ clean:
 	rm -f bin/main.elf
 
 run:
-	qemu-system-riscv64 -machine virt -kernel bin/main.elf -nographic
+	qemu-system-riscv64 -machine virt -bios none -kernel bin/main.elf -nographic
