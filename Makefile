@@ -21,7 +21,7 @@ compile_emilia: setup
 
 compile: setup compile_jny compile_emilia
 
-run_jny: compile
+run_jny: compile_jny
 	qemu-system-riscv64 -machine virt -bios bin/jny.elf -nographic
 
 run: compile
