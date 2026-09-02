@@ -5,7 +5,7 @@ BOOLOADER_LD = jny.ld
 KERNEL_LD = emilia.ld
 LINKER = BOOLOADER_LD
 
-.PHONY setup compile clean run
+.PHONY: setup compile clean run
 
 setup:
 	mkdir bin
