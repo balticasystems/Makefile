@@ -5,12 +5,12 @@ BOOLOADER_LD = jny.ld
 KERNEL_LD = emilia.ld
 LINKER = BOOLOADER_LD
 
-.PHONY: setup compile clean run
+all: compile run
 
 setup:
-	mkdir bin
+	mkdir -p bin
 
-compile:
+compile: setup
 	$(CC) $(CFLAGS) -T $(LINKER) $(SRCS) -o bin/main.elf
 
 clean:
